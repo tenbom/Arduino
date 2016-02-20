@@ -53,3 +53,24 @@ uint8_t sensorState() {
   state = ((isOnTheLine(RCTime(Pin6))*pow(2,4)) + (isOnTheLine(RCTime(Pin5))*pow(2,3)) + (isOnTheLine(RCTime(Pin4))*pow(2,2)) + (isOnTheLine(RCTime(Pin3))*pow(2,1)) + (isOnTheLine(RCTime(Pin2))));
   return state;
 }
+
+void drive {
+ if (state == 4) {    //00100
+  //straight();
+ }
+ if (state == 0) {    //00000
+  //leftTurn();
+ } 
+ if (state == 28) {   //11100
+  //leftTurn();
+ } 
+ if (state == 31) {   //11111
+  //straight();
+ } 
+ if (state == 0) {    //00000
+  //();
+ } 
+ if (state == 0) {    //00000
+  //();
+ }  
+}
