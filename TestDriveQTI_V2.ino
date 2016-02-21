@@ -1,5 +1,6 @@
 //from front of sensor
 //5v, ground, signal
+//2/21/2016 EDIT
 //Pins for the sensors=======================================
 #define Pin2 2
 #define Pin3 3
@@ -14,9 +15,9 @@ void setup() {
 }
 
 void loop() {
-  currentTime = millis();
+  currentTime = millis();           // Initialize Timer
   Serial.println(RCTime(Pin2));	    // Connect to pin 2, display results
-  //Serial.println(RCTime(Pin3));
+  //Serial.println(RCTime(Pin3));   // Same for these
   //Serial.println(RCTime(Pin4));
   //Serial.println(RCTime(Pin5));
   //Serial.println(RCTime(Pin6));
@@ -27,15 +28,21 @@ int RCTime(int sensorIn){         //
    digitalWrite(sensorIn, HIGH);  // Pin HIGH (discharge capacitor)
    pinMode(sensorIn, INPUT);      // Make pin INPUT
    digitalWrite(sensorIn, LOW);   // Turn off internal pullups
-   if(digitalRead(sensorIn)){     // Wait for pin to go LOW
+   if(digitalRead(sensorIn)){     // Pin goes LOW which means its on the black line
       return 1;
    }
-   if (!digitalRead(sensorIn)) {
+   if (!digitalRead(sensorIn)) {  // Pin goes HIGH which means its not on the black line
       return 0;
    }
 }
-
-long sensorState() {
+/*
+  Taking the position of each of the sensors into account, I arranged the 
+  function to produce a binary digit that is being created as base 2 but is 
+  stored as its base 10 value. This allows us to produce a single variable 
+  state for our entire array of line sensors as opposed to having to create
+  a for loop that would ruin the continuity of multi tasking for the robot. 
+*/
+long sensorState() { 
   state = ((RCTime(Pin6)*pow(2,4)) + (RCTime(Pin5)*pow(2,3)) + (RCTime(Pin4)*pow(2,2)) + (RCTime(Pin3)*pow(2,1)) + RCTime(Pin2));
   return state;
 }
