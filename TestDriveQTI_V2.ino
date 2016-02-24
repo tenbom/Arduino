@@ -1,6 +1,6 @@
 //from front of sensor
 //5v, ground, signal
-//2/21/2016 EDIT
+//2/24/2016 EDIT
 //Pins for the sensors=======================================
 #define Pin2 2
 #define Pin3 3
@@ -48,22 +48,22 @@ long sensorState() {
 }
 
 void drive() {
- if (state == 4) {    //00100
+ if (sensorState() == 4) {    //00100
   //straight();
  }
- if (state == 0) {    //00000
+ if (sensorState() == 0) {    //00000
   //leftTurn();
  } 
- if (state == 28) {   //11100
+ if (sensorState() == 28) {   //11100
   //leftTurn();
  } 
- if (state == 31) {   //11111
+ if (sensorState() == 31) {   //11111
   //straight();
  } 
- if (state == 0) {    //00000
+ if (sensorState() == 0) {    //00000
   //();
  } 
- if (state == 0) {    //00000
+ if (sensorState() == 0) {    //00000
   //();
  }  
 }
