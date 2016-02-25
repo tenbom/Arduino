@@ -1,17 +1,21 @@
 //from front of sensor
 //5v, ground, signal
 //2/24/2016 EDIT
+
+//#include "DualVNH5019MotorShield.h"
+//DualVNH5019MotorShield md;
 //Pins for the sensors=======================================
-#define Pin2 2
-#define Pin3 3
-#define Pin4 4
-#define Pin5 5
-#define Pin6 6
+#define Pin2 20
+#define Pin3 22
+#define Pin4 24
+#define Pin5 26
+#define Pin6 28
 //===========================================================
 uint64_t currentTime = 0;
 uint8_t state = 0;
 void setup() {
   Serial.begin(9600);
+ // md.init();
 }
 
 void loop() {
@@ -57,8 +61,8 @@ void drive() {
  if (sensorState() == 28) {   //11100
   //leftTurn();
  } 
- if (sensorState() == 31) {   //11111
-  //straight();
+ if (sensorState() == 31) {   //11111 second time we encounter this it has to be a
+  //straight();               //right turn
  } 
  if (sensorState() == 0) {    //00000
   //();
@@ -67,3 +71,31 @@ void drive() {
   //();
  }  
 }
+/*
+void forward() {
+  md.setM1Speed(-300); //right side //More powerful
+  md.setM2Speed(380);//left side
+}
+
+void backward() {
+  md.setM1Speed(300); //right side
+  md.setM2Speed(-380);//left side
+}
+
+void leftTurn() {
+  md.setM1Speed(-300); //Forward right side
+  md.setM2Speed(-380);//Reverse left side
+}
+
+void rightTurn() {
+ md.setM1Speed(300); //Reverse right side
+ md.setM2Speed(380);//Forward left side
+}
+
+void stopMotors() {
+ md.setM1Speed(0);
+ delayMicroseconds(10);
+ md.setM2Speed(0);
+ delayMicroseconds(10);
+}
+*/
