@@ -12,7 +12,7 @@
 #define Pin6 30 // right side
 //===========================================================
 uint64_t currentTime = 0;
-uint8_t state = 0;
+
 void setup() {
   Serial.begin(9600);
  // md.init();
@@ -20,11 +20,12 @@ void setup() {
 
 void loop() {
   currentTime = millis();           // Initialize Timer
-  //Serial.println(RCTime(Pin2));	    // Connect to pin 2, display results
+  //Serial.println(RCTime(Pin2));   // Connect to pin 2, display results
   //Serial.println(RCTime(Pin3));   // Same for these
   //Serial.println(RCTime(Pin4));
   //Serial.println(RCTime(Pin5));
   //Serial.println(RCTime(Pin6));
+  Serial.print("Sensor state: ");
   sensorState();
   //delay(50);
 }
@@ -49,11 +50,10 @@ int RCTime(int sensorIn){         //
   a for loop that would ruin the continuity of multi tasking for the robot. 
 */
 long sensorState() { 
-  //int temp = 0;
-  state = ((RCTime(Pin6)*pow(2,4)) + (RCTime(Pin5)*pow(2,3)) + (RCTime(Pin4)*pow(2,2)) + (RCTime(Pin3)*pow(2,1)) + RCTime(Pin2));
-  Serial.println(state);
-  //temp = state;
-  return state;
+  int temp = 0;
+  temp = ((RCTime(Pin6)*pow(2,4)) + (RCTime(Pin5)*pow(2,3)) + (RCTime(Pin4)*pow(2,2)) + (RCTime(Pin3)*pow(2,1)) + RCTime(Pin2));
+  Serial.println(temp);
+  return temp;
 }
 
 void drive() {
@@ -77,27 +77,27 @@ void drive() {
  }  
 }
 /*
-void forward() {
+void forward() {  //Moves the robot forward
   md.setM1Speed(-300); //right side //More powerful
   md.setM2Speed(380);//left side
 }
 
-void backward() {
+void backward() { //Moves te robot backwards
   md.setM1Speed(300); //right side
   md.setM2Speed(-380);//left side
 }
 
-void leftTurn() {
+void leftTurn() { //Turns the robot left from the center
   md.setM1Speed(-300); //Forward right side
   md.setM2Speed(-380);//Reverse left side
 }
 
-void rightTurn() {
+void rightTurn() { //Turns the robot right from the center
  md.setM1Speed(300); //Reverse right side
  md.setM2Speed(380);//Forward left side
 }
 
-void stopMotors() {
+void stopMotors() {//Stop the robot
  md.setM1Speed(0);
  delayMicroseconds(10);
  md.setM2Speed(0);
