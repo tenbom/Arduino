@@ -20,12 +20,12 @@ void setup() {
 
 void loop() {
   currentTime = millis();           // Refresh Timer
-  Serial.print("Sensor state: ");
-  sensorState();
-  //inputValues();
+  //Serial.print("Sensor state: ");
+  //sensorState();
+  virtualTrack();
 }
 
-int IsOnLine(int sensorIn){         //
+int isOnLine(int sensorIn){         //
    pinMode(sensorIn, OUTPUT);     // Make pin OUTPUT
    digitalWrite(sensorIn, HIGH);  // Pin HIGH (discharge capacitor)
    pinMode(sensorIn, INPUT);      // Make pin INPUT
@@ -46,28 +46,33 @@ int IsOnLine(int sensorIn){         //
 */
 int sensorState() { 
   int currentState = 0;
-  currentState = ((IsOnLine(Pin6)*pow(2,4)) + (IsOnLine(Pin5)*pow(2,3)) + (IsOnLine(Pin4)*pow(2,2)) + (IsOnLine(Pin3)*pow(2,1)) + IsOnLine(Pin2));
+  currentState = ((isOnLine(Pin6)*pow(2,4)) + (isOnLine(Pin5)*pow(2,3)) + (isOnLine(Pin4)*pow(2,2)) + (isOnLine(Pin3)*pow(2,1)) + isOnLine(Pin2));
   Serial.println(currentState);
   return currentState;
 }
 
-void drive() {
- if (sensorState() == 4) {    //00100
+void drive(int state) {
+ if (state == 4) {    //00100
   //straight();
+  Serial.println("Straight");
  }
- if (sensorState() == 0) {    //00000
+ if (state == 0) {    //00000
   //leftTurn();
+  Serial.println("Left turn");
  } 
- if (sensorState() == 28) {   //11100
+ if (state == 28) {   //11100
   //leftTurn();
+  Serial.println("Left turn");
  } 
- if (sensorState() == 31) {   //11111 second time we encounter this it has to be a
-  //straight();               //right turn
+ if (state == 31) {   //11111 second time we encounter this it has to be a
+  //straight();       //right turn
+  Serial.println("Straight");
+  Serial.println("Right turn");
  } 
- if (sensorState() == 0) {    //00000
+ if (state == 0) {    //00000
   //();
  } 
- if (sensorState() == 0) {    //00000
+ if (state == 0) {    //00000
   //();
  }  
 }
@@ -77,22 +82,18 @@ void forward() {  //Moves the robot forward
   md.setM1Speed(-300); //right side //More powerful
   md.setM2Speed(380);//left side
 }
-
 void backward() { //Moves te robot backwards
   md.setM1Speed(300); //right side
   md.setM2Speed(-380);//left side
 }
-
 void leftTurn() { //Turns the robot left from the center
   md.setM1Speed(-300); //Forward right side
   md.setM2Speed(-380);//Reverse left side
 }
-
 void rightTurn() { //Turns the robot right from the center
  md.setM1Speed(300); //Reverse right side
  md.setM2Speed(380);//Forward left side
 }
-
 void stopMotors() {//Stop the robot
  md.setM1Speed(0);
  delayMicroseconds(10);
@@ -103,39 +104,67 @@ void stopMotors() {//Stop the robot
 //END OF MOTOR FUNCTIONS===============================================================
 void inputValues() {
   Serial.print("Sensor 1: ");
-  Serial.print(IsOnLine(Pin2));   // Connect to pin 2, display results
+  Serial.print(isOnLine(Pin2));   // Connect to pin 2, display results
   Serial.print(", Sensor 2: ");
-  Serial.print(IsOnLine(Pin3));   // Same for these
+  Serial.print(isOnLine(Pin3));   // Same for these
   Serial.print(", Sensor 3: ");
-  Serial.print(IsOnLine(Pin4));
+  Serial.print(isOnLine(Pin4));
   Serial.print(", Sensor 4: ");
-  Serial.print(IsOnLine(Pin5));
+  Serial.print(isOnLine(Pin5));
   Serial.print(", Sensor 5: ");
-  Serial.print(IsOnLine(Pin6));
+  Serial.print(isOnLine(Pin6));
   Serial.println();
 }
 //VIRTUAL TRACK=============================================================================
+/*
+  This function is a copy of isOnLine but is only used to test the track path
+  pattern.
+*/
+int testSensor(int tPin0, int tPin1, int tPin2, int tPin3, int tPin4) {
+  int currentState = 0;
+  currentState = ((tPin0*pow(2,4)) + (tPin1*pow(2,3)) + (tPin2*pow(2,2)) + (tPin3*pow(2,1)) + tPin4);
+  //Serial.println(currentState);
+  return currentState;
+}
 /*
   Produces a virtual track that mimics the real thing.
   It contains the same patterns the robot would 
   encounter on the track.
 */
-void virtualDrive() {
-  if ((currentTime > 0) && (currentTime < 1000)) { //Start
-    
+void virtualTrack() {
+  if ((currentTime > 0) && (currentTime < 1000)) { //Start 00000
+    drive(testSensor(0,0,0,0,0));
   }
-  if ((currentTime > 1000) && (currentTime < 1500)) { //Out of start Area
-    
+  if ((currentTime > 1000) && (currentTime < 1500)) { //Out of start Area 11111
+    drive(testSensor(1,1,1,1,1));
   }
-  if ((currentTime > 1500) && (currentTime < 4000)) { //First Straight
-    
+  if ((currentTime > 1500) && (currentTime < 4000)) { //First Straight 00100
+    drive(testSensor(0,0,1,0,0));
   }
-  if ((currentTime > 4000) && (currentTime < 4100)) { //First Left Turn
-    
+  if ((currentTime > 5500) && (currentTime < 5700)) { //First Left Turn 11100
+    drive(testSensor(1,1,1,0,0));
   }
-  if ((currentTime > 4100) && (currentTime < 6000)) { //Second Straight
-    
+  //First Quadrant END============================================================================
+  if ((currentTime > 5700) && (currentTime < 8000)) { //Second Straight 00100
+    drive(testSensor(0,0,1,0,0));
   }
+  if ((currentTime > 8000) && (currentTime < 8100)) { //Ignore turn and go Straight 11100
+    drive(testSensor(1,1,1,0,0));
+  }
+  if ((currentTime > 8100) && (currentTime < 10400)) { //Third Straight 00100
+    drive(testSensor(0,0,1,0,0));
+  }
+  if ((currentTime > 10400) && (currentTime < 10500)) { //Second Turn Left 11100
+    drive(testSensor(1,1,1,0,0));
+  }
+  //Second Quadrant END==========================================================================
+  if ((currentTime > 10500) && (currentTime < 12000)) { //Keep Straight 00100
+    drive(testSensor(0,0,1,0,0));
+  }
+  if ((currentTime > 12000) && (currentTime < 12100)) { //Third Left turn 11100
+    drive(testSensor(1,1,1,0,0));
+  }
+  //Third Quadrant END===========================================================================
 //END OF VIRTUAL TRACK=======================================================================
 }
 /*
@@ -144,18 +173,20 @@ void virtualDrive() {
   11111 Out of the start area
   00100 first straight
   11100 first left turn
-  -----------------------------
+  First Quadrant End-----------------------------
   00100 second straight
   11100 ignore and go straight
   00100 third straight
-  11100 turn left 
-  -----------------------------
+  11100 second turn left 
+  Second Quadrant End----------------------------
   00100 go straight
-  11100 turn left
-  -----------------------------
-  00100 go straight
+  11100 third turn left
+  Third Quadrant End-----------------------------
+  00100 go straight SHORT
   11111 turn right
   00100 go straight SHORT
   00111 turn right
+  00100 go straight SHORT
+  //Fourth Quadrant End--------------------------
   
 */
