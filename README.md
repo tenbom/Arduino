@@ -1,3 +1,1 @@
-# Arduino
-WRYYYYYYY
-Please use Version 2 of the TestDriveQTI. Version 2 contains some simplifications to the code.
+Use TestDriveQTI_V2, the code has been simplified and it now contains a virtual track. It is still a work in progress.
