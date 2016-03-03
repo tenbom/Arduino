@@ -19,41 +19,36 @@ void setup() {
 }
 
 void loop() {
-  currentTime = millis();           // Initialize Timer
-  //Serial.println(RCTime(Pin2));   // Connect to pin 2, display results
-  //Serial.println(RCTime(Pin3));   // Same for these
-  //Serial.println(RCTime(Pin4));
-  //Serial.println(RCTime(Pin5));
-  //Serial.println(RCTime(Pin6));
+  currentTime = millis();           // Refresh Timer
   Serial.print("Sensor state: ");
   sensorState();
-  //delay(50);
+  //inputValues();
 }
 
-int RCTime(int sensorIn){         //
+int IsOnLine(int sensorIn){         //
    pinMode(sensorIn, OUTPUT);     // Make pin OUTPUT
    digitalWrite(sensorIn, HIGH);  // Pin HIGH (discharge capacitor)
    pinMode(sensorIn, INPUT);      // Make pin INPUT
    digitalWrite(sensorIn, LOW);   // Turn off internal pullups
-   if (!digitalRead(sensorIn)) {  // Pin goes HIGH which means its not on the black line
+   if (!digitalRead(sensorIn)) {  // Pin goes HIGH which means its on the black line
       return 1;
    }
-   if(digitalRead(sensorIn)){     // Pin goes LOW which means its on the black line
+   if(digitalRead(sensorIn)){     // Pin goes LOW which means its not on the black line
       return 0;
    }
 }
 /*
-  Taking the position of each of the sensors into account, I arranged the 
+  Taking the position of each of the 5 sensors into account, I arranged the 
   function to produce a binary digit that is being created as base 2 but is 
   stored as its base 10 value. This allows us to produce a single variable 
   state for our entire array of line sensors as opposed to having to create
   a for loop that would ruin the continuity of multi tasking for the robot. 
 */
-long sensorState() { 
-  int temp = 0;
-  temp = ((RCTime(Pin6)*pow(2,4)) + (RCTime(Pin5)*pow(2,3)) + (RCTime(Pin4)*pow(2,2)) + (RCTime(Pin3)*pow(2,1)) + RCTime(Pin2));
-  Serial.println(temp);
-  return temp;
+int sensorState() { 
+  int currentState = 0;
+  currentState = ((IsOnLine(Pin6)*pow(2,4)) + (IsOnLine(Pin5)*pow(2,3)) + (IsOnLine(Pin4)*pow(2,2)) + (IsOnLine(Pin3)*pow(2,1)) + IsOnLine(Pin2));
+  Serial.println(currentState);
+  return currentState;
 }
 
 void drive() {
@@ -76,6 +71,7 @@ void drive() {
   //();
  }  
 }
+//MOTOR FUNCTIONS=========================================================================
 /*
 void forward() {  //Moves the robot forward
   md.setM1Speed(-300); //right side //More powerful
@@ -103,4 +99,63 @@ void stopMotors() {//Stop the robot
  md.setM2Speed(0);
  delayMicroseconds(10);
 }
+*/
+//END OF MOTOR FUNCTIONS===============================================================
+void inputValues() {
+  Serial.print("Sensor 1: ");
+  Serial.print(IsOnLine(Pin2));   // Connect to pin 2, display results
+  Serial.print(", Sensor 2: ");
+  Serial.print(IsOnLine(Pin3));   // Same for these
+  Serial.print(", Sensor 3: ");
+  Serial.print(IsOnLine(Pin4));
+  Serial.print(", Sensor 4: ");
+  Serial.print(IsOnLine(Pin5));
+  Serial.print(", Sensor 5: ");
+  Serial.print(IsOnLine(Pin6));
+  Serial.println();
+}
+//VIRTUAL TRACK=============================================================================
+/*
+  Produces a virtual track that mimics the real thing.
+  It contains the same patterns the robot would 
+  encounter on the track.
+*/
+void virtualDrive() {
+  if ((currentTime > 0) && (currentTime < 1000)) { //Start
+    
+  }
+  if ((currentTime > 1000) && (currentTime < 1500)) { //Out of start Area
+    
+  }
+  if ((currentTime > 1500) && (currentTime < 4000)) { //First Straight
+    
+  }
+  if ((currentTime > 4000) && (currentTime < 4100)) { //First Left Turn
+    
+  }
+  if ((currentTime > 4100) && (currentTime < 6000)) { //Second Straight
+    
+  }
+//END OF VIRTUAL TRACK=======================================================================
+}
+/*
+  Robot path
+  00000 Start
+  11111 Out of the start area
+  00100 first straight
+  11100 first left turn
+  -----------------------------
+  00100 second straight
+  11100 ignore and go straight
+  00100 third straight
+  11100 turn left 
+  -----------------------------
+  00100 go straight
+  11100 turn left
+  -----------------------------
+  00100 go straight
+  11111 turn right
+  00100 go straight SHORT
+  00111 turn right
+  
 */
