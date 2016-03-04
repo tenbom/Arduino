@@ -12,7 +12,7 @@
 #define Pin6 30 // right side
 //===========================================================
 uint64_t currentTime = 0;
-
+int barCounter = 0;
 void setup() {
   Serial.begin(9600);
  // md.init();
@@ -20,7 +20,10 @@ void setup() {
 
 void loop() {
   currentTime = millis();           // Refresh Timer
-  //Serial.print("Sensor state: ");
+  Serial.print("Time: "); 
+  long time = currentTime; //If using currentTime print won't work by reference
+  Serial.print(time );
+  Serial.print("    ");
   //sensorState();
   virtualTrack();
 }
@@ -50,33 +53,44 @@ int sensorState() {
   Serial.println(currentState);
   return currentState;
 }
-
+//PATTERN RECOGNITION=========================================================================================
 void drive(int state) {
  if (state == 4) {    //00100
   //straight();
   Serial.println("Straight");
  }
  if (state == 0) {    //00000
-  //leftTurn();
-  Serial.println("Left turn");
+  //Straight();
+  Serial.println("Start Area");
  } 
  if (state == 28) {   //11100
   //leftTurn();
   Serial.println("Left turn");
  } 
- if (state == 31) {   //11111 second time we encounter this it has to be a
-  //straight();       //right turn
-  Serial.println("Straight");
-  Serial.println("Right turn");
+ if (state == 31) {   //11111 second time we encounter this it has to be a right turn
+  //straight();  
+  if(barCounter == 0)
+    Serial.println("Straight");
+  if((barCounter == 1) || (barCounter == 2)) {
+    Serial.println("Right turn");
+  }
+  barCounter++;
  } 
- if (state == 0) {    //00000
-  //();
+ //Correction routines-------------
+ if (state == 0) {    //01100
+  //slightRight();
  } 
- if (state == 0) {    //00000
-  //();
+ if (state == 0) {    //01000
+  //slightRight();
+ } 
+ if (state == 0) {    //00110
+  //slightLeft();
  }  
+ if (state == 0) {    //00010
+  //slightLeft();
+ } 
 }
-//MOTOR FUNCTIONS=========================================================================
+//MOTOR FUNCTIONS=============================================================================================
 /*
 void forward() {  //Moves the robot forward
   md.setM1Speed(-300); //right side //More powerful
@@ -141,27 +155,27 @@ void virtualTrack() {
   if ((currentTime > 1500) && (currentTime < 4000)) { //First Straight 00100
     drive(testSensor(0,0,1,0,0));
   }
-  if ((currentTime > 5500) && (currentTime < 5700)) { //First Left Turn 11100
+  if ((currentTime > 4000) && (currentTime < 4100)) { //First Left Turn 11100
     drive(testSensor(1,1,1,0,0));
   }
   //First Quadrant END============================================================================
-  if ((currentTime > 5700) && (currentTime < 8000)) { //Second Straight 00100
+  if ((currentTime > 4100) && (currentTime < 6000)) { //Second Straight 00100
     drive(testSensor(0,0,1,0,0));
   }
-  if ((currentTime > 8000) && (currentTime < 8100)) { //Ignore turn and go Straight 11100
+  if ((currentTime > 6000) && (currentTime < 6100)) { //Ignore turn and go Straight 11100
     drive(testSensor(1,1,1,0,0));
   }
-  if ((currentTime > 8100) && (currentTime < 10400)) { //Third Straight 00100
+  if ((currentTime > 6100) && (currentTime < 8400)) { //Third Straight 00100
     drive(testSensor(0,0,1,0,0));
   }
-  if ((currentTime > 10400) && (currentTime < 10500)) { //Second Turn Left 11100
+  if ((currentTime > 8400) && (currentTime < 8500)) { //Second Turn Left 11100
     drive(testSensor(1,1,1,0,0));
   }
   //Second Quadrant END==========================================================================
-  if ((currentTime > 10500) && (currentTime < 12000)) { //Keep Straight 00100
+  if ((currentTime > 8500) && (currentTime < 9500)) { //Keep Straight 00100
     drive(testSensor(0,0,1,0,0));
   }
-  if ((currentTime > 12000) && (currentTime < 12100)) { //Third Left turn 11100
+  if ((currentTime > 9500) && (currentTime < 9600)) { //Third Left turn 11100
     drive(testSensor(1,1,1,0,0));
   }
   //Third Quadrant END===========================================================================
