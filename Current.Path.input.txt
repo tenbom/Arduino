@@ -1,403 +1,365 @@
-Time: 23    Left turn
-Time: 47    Left turn
-Time: 71    Left turn
-Time: 95    Left turn
-Time: 118    Left turn
-Time: 144    Left turn
-Time: 168    Left turn
-Time: 194    Left turn
-Time: 219    Left turn
-Time: 243    Left turn
-Time: 269    Left turn
-Time: 293    Left turn
-Time: 318    Left turn
-Time: 344    Left turn
-Time: 368    Left turn
-Time: 394    Left turn
-Time: 418    Left turn
-Time: 443    Left turn
-Time: 468    Left turn
-Time: 493    Left turn
-Time: 518    Left turn
-Time: 543    Left turn
-Time: 568    Left turn
-Time: 593    Left turn
-Time: 618    Left turn
-Time: 643    Left turn
-Time: 668    Left turn
-Time: 693    Left turn
-Time: 717    Left turn
-Time: 743    Left turn
-Time: 768    Left turn
-Time: 793    Left turn
-Time: 818    Left turn
-Time: 842    Left turn
-Time: 868    Left turn
-Time: 892    Left turn
-Time: 917    Left turn
-Time: 943    Left turn
-Time: 967    Left turn
-Time: 993    Left turn
-Time: 1017    Straight
-Time: 1042    Right turn
-Time: 1070    Right turn
-Time: 1096    Time: 1111    Time: 1126    Time: 1140    Time: 1155    Time: 1169    Time: 1183    Time: 1199    Time: 1213    Time: 1227    Time: 1242    Time: 1257    Time: 1271    Time: 1286    Time: 1300    Time: 1314    Time: 1330    Time: 1344    Time: 1358    Time: 1373    Time: 1387    Time: 1402    Time: 1417    Time: 1431    Time: 1445    Time: 1461    Time: 1475    Time: 1489    Time: 1504    Straight
-Time: 1529    Straight
-Time: 1554    Straight
-Time: 1579    Straight
-Time: 1604    Straight
-Time: 1629    Straight
-Time: 1653    Straight
-Time: 1679    Straight
-Time: 1703    Straight
-Time: 1729    Straight
-Time: 1754    Straight
-Time: 1778    Straight
-Time: 1804    Straight
-Time: 1828    Straight
-Time: 1853    Straight
-Time: 1879    Straight
-Time: 1903    Straight
-Time: 1929    Straight
-Time: 1953    Straight
-Time: 1978    Straight
-Time: 2003    Straight
-Time: 2028    Straight
-Time: 2053    Straight
-Time: 2078    Straight
-Time: 2103    Straight
-Time: 2128    Straight
-Time: 2153    Straight
-Time: 2178    Straight
-Time: 2203    Straight
-Time: 2228    Straight
-Time: 2252    Straight
-Time: 2278    Straight
-Time: 2302    Straight
-Time: 2328    Straight
-Time: 2353    Straight
-Time: 2377    Straight
-Time: 2403    Straight
-Time: 2427    Straight
-Time: 2452    Straight
-Time: 2478    Straight
-Time: 2502    Straight
-Time: 2528    Straight
-Time: 2552    Straight
-Time: 2577    Straight
-Time: 2603    Straight
-Time: 2627    Straight
-Time: 2652    Straight
-Time: 2677    Straight
-Time: 2702    Straight
-Time: 2727    Straight
-Time: 2752    Straight
-Time: 2777    Straight
-Time: 2802    Straight
-Time: 2827    Straight
-Time: 2851    Straight
-Time: 2877    Straight
-Time: 2902    Straight
-Time: 2927    Straight
-Time: 2952    Straight
-Time: 2976    Straight
-Time: 3002    Straight
-Time: 3026    Straight
-Time: 3051    Straight
-Time: 3077    Straight
-Time: 3101    Straight
-Time: 3127    Straight
-Time: 3151    Straight
-Time: 3176    Straight
-Time: 3202    Straight
-Time: 3226    Straight
-Time: 3251    Straight
-Time: 3276    Straight
-Time: 3301    Straight
-Time: 3326    Straight
-Time: 3351    Straight
-Time: 3376    Straight
-Time: 3401    Straight
-Time: 3426    Straight
-Time: 3450    Straight
-Time: 3476    Straight
-Time: 3501    Straight
-Time: 3526    Straight
-Time: 3551    Straight
-Time: 3575    Straight
-Time: 3601    Straight
-Time: 3625    Straight
-Time: 3650    Straight
-Time: 3676    Straight
-Time: 3700    Straight
-Time: 3726    Straight
-Time: 3750    Straight
-Time: 3775    Straight
-Time: 3801    Straight
-Time: 3825    Straight
-Time: 3850    Straight
-Time: 3875    Straight
-Time: 3900    Straight
-Time: 3926    Straight
-Time: 3950    Straight
-Time: 3975    Straight
-Time: 4000    Time: 4015    Time: 4029    Time: 4043    Time: 4059    Time: 4073    Time: 4087    Time: 4102    Time: 4116    Time: 4131    Time: 4146    Time: 4160    Time: 4174    Time: 4190    Time: 4204    Time: 4218    Time: 4233    Time: 4247    Time: 4262    Time: 4277    Time: 4291    Time: 4305    Time: 4321    Time: 4335    Time: 4349    Time: 4364    Time: 4378    Time: 4393    Time: 4408    Time: 4422    Time: 4436    Time: 4452    Time: 4466    Time: 4481    Time: 4495    Time: 4509    Time: 4525    Time: 4539    Time: 4553    Time: 4568    Time: 4582    Time: 4597    Time: 4612    Time: 4626    Time: 4640    Time: 4656    Time: 4670    Time: 4684    Time: 4699    Time: 4713    Time: 4728    Time: 4743    Time: 4757    Time: 4771    Time: 4787    Time: 4801    Time: 4815    Time: 4830    Time: 4844    Time: 4859    Time: 4874    Time: 4888    Time: 4902    Time: 4918    Time: 4932    Time: 4946    Time: 4961    Time: 4975    Time: 4990    Time: 5005    Time: 5019    Time: 5033    Time: 5048    Time: 5063    Time: 5078    Time: 5092    Time: 5106    Time: 5122    Time: 5136    Time: 5150    Time: 5165    Time: 5179    Time: 5194    Time: 5209    Time: 5223    Time: 5237    Time: 5253    Time: 5267    Time: 5281    Time: 5296    Time: 5310    Time: 5325    Time: 5340    Time: 5354    Time: 5368    Time: 5384    Time: 5398    Time: 5412    Time: 5427    Time: 5441    Time: 5456    Time: 5471    Time: 5485    Time: 5499    Time: 5514    Left turn
-Time: 5540    Left turn
-Time: 5566    Left turn
-Time: 5593    Left turn
-Time: 5618    Left turn
-Time: 5644    Left turn
-Time: 5670    Left turn
-Time: 5696    Left turn
-Time: 5723    Straight
-Time: 5747    Straight
-Time: 5772    Straight
-Time: 5797    Straight
-Time: 5822    Straight
-Time: 5847    Straight
-Time: 5872    Straight
-Time: 5897    Straight
-Time: 5922    Straight
-Time: 5947    Straight
-Time: 5971    Straight
-Time: 5997    Straight
-Time: 6022    Straight
-Time: 6046    Straight
-Time: 6072    Straight
-Time: 6096    Straight
-Time: 6122    Straight
-Time: 6147    Straight
-Time: 6171    Straight
-Time: 6197    Straight
-Time: 6221    Straight
-Time: 6246    Straight
-Time: 6272    Straight
-Time: 6296    Straight
-Time: 6322    Straight
-Time: 6346    Straight
-Time: 6371    Straight
-Time: 6396    Straight
-Time: 6421    Straight
-Time: 6446    Straight
-Time: 6471    Straight
-Time: 6496    Straight
-Time: 6521    Straight
-Time: 6546    Straight
-Time: 6571    Straight
-Time: 6596    Straight
-Time: 6621    Straight
-Time: 6645    Straight
-Time: 6671    Straight
-Time: 6695    Straight
-Time: 6721    Straight
-Time: 6746    Straight
-Time: 6770    Straight
-Time: 6796    Straight
-Time: 6820    Straight
-Time: 6845    Straight
-Time: 6871    Straight
-Time: 6895    Straight
-Time: 6921    Straight
-Time: 6945    Straight
-Time: 6970    Straight
-Time: 6995    Straight
-Time: 7020    Straight
-Time: 7045    Straight
-Time: 7070    Straight
-Time: 7095    Straight
-Time: 7120    Straight
-Time: 7145    Straight
-Time: 7170    Straight
-Time: 7195    Straight
-Time: 7220    Straight
-Time: 7244    Straight
-Time: 7270    Straight
-Time: 7294    Straight
-Time: 7320    Straight
-Time: 7345    Straight
-Time: 7369    Straight
-Time: 7395    Straight
-Time: 7419    Straight
-Time: 7444    Straight
-Time: 7470    Straight
-Time: 7494    Straight
-Time: 7520    Straight
-Time: 7544    Straight
-Time: 7569    Straight
-Time: 7595    Straight
-Time: 7619    Straight
-Time: 7644    Straight
-Time: 7669    Straight
-Time: 7694    Straight
-Time: 7719    Straight
-Time: 7744    Straight
-Time: 7769    Straight
-Time: 7794    Straight
-Time: 7819    Straight
-Time: 7843    Straight
-Time: 7869    Straight
-Time: 7894    Straight
-Time: 7919    Straight
-Time: 7944    Straight
-Time: 7968    Straight
-Time: 7994    Straight
-Time: 8018    Left turn
-Time: 8044    Left turn
-Time: 8071    Left turn
-Time: 8096    Left turn
-Time: 8123    Straight
-Time: 8147    Straight
-Time: 8172    Straight
-Time: 8198    Straight
-Time: 8222    Straight
-Time: 8248    Straight
-Time: 8272    Straight
-Time: 8297    Straight
-Time: 8323    Straight
-Time: 8347    Straight
-Time: 8372    Straight
-Time: 8397    Straight
-Time: 8422    Straight
-Time: 8448    Straight
-Time: 8472    Straight
-Time: 8497    Straight
-Time: 8522    Straight
-Time: 8547    Straight
-Time: 8571    Straight
-Time: 8597    Straight
-Time: 8622    Straight
-Time: 8647    Straight
-Time: 8672    Straight
-Time: 8696    Straight
-Time: 8722    Straight
-Time: 8747    Straight
-Time: 8771    Straight
-Time: 8797    Straight
-Time: 8821    Straight
-Time: 8847    Straight
-Time: 8871    Straight
-Time: 8896    Straight
-Time: 8922    Straight
-Time: 8946    Straight
-Time: 8971    Straight
-Time: 8996    Straight
-Time: 9021    Straight
-Time: 9047    Straight
-Time: 9071    Straight
-Time: 9096    Straight
-Time: 9121    Straight
-Time: 9146    Straight
-Time: 9170    Straight
-Time: 9196    Straight
-Time: 9221    Straight
-Time: 9246    Straight
-Time: 9271    Straight
-Time: 9295    Straight
-Time: 9321    Straight
-Time: 9346    Straight
-Time: 9370    Straight
-Time: 9396    Straight
-Time: 9420    Straight
-Time: 9446    Straight
-Time: 9470    Straight
-Time: 9495    Straight
-Time: 9521    Straight
-Time: 9545    Straight
-Time: 9570    Straight
-Time: 9595    Straight
-Time: 9620    Straight
-Time: 9646    Straight
-Time: 9670    Straight
-Time: 9695    Straight
-Time: 9720    Straight
-Time: 9745    Straight
-Time: 9769    Straight
-Time: 9795    Straight
-Time: 9820    Straight
-Time: 9845    Straight
-Time: 9870    Straight
-Time: 9894    Straight
-Time: 9920    Straight
-Time: 9945    Straight
-Time: 9969    Straight
-Time: 9995    Straight
-Time: 10019    Straight
-Time: 10046    Straight
-Time: 10072    Straight
-Time: 10097    Straight
-Time: 10124    Straight
-Time: 10149    Straight
-Time: 10175    Straight
-Time: 10202    Straight
-Time: 10227    Straight
-Time: 10254    Straight
-Time: 10279    Straight
-Time: 10305    Straight
-Time: 10332    Straight
-Time: 10357    Straight
-Time: 10384    Straight
-Time: 10409    Left turn
-Time: 10436    Left turn
-Time: 10464    Left turn
-Time: 10490    Left turn
-Time: 10518    Straight
-Time: 10544    Straight
-Time: 10569    Straight
-Time: 10596    Straight
-Time: 10621    Straight
-Time: 10648    Straight
-Time: 10674    Straight
-Time: 10699    Straight
-Time: 10726    Straight
-Time: 10752    Straight
-Time: 10778    Straight
-Time: 10804    Straight
-Time: 10829    Straight
-Time: 10856    Straight
-Time: 10882    Straight
-Time: 10907    Straight
-Time: 10934    Straight
-Time: 10959    Straight
-Time: 10986    Straight
-Time: 11012    Straight
-Time: 11037    Straight
-Time: 11064    Straight
-Time: 11089    Straight
-Time: 11116    Straight
-Time: 11142    Straight
-Time: 11167    Straight
-Time: 11194    Straight
-Time: 11219    Straight
-Time: 11246    Straight
-Time: 11272    Straight
-Time: 11297    Straight
-Time: 11324    Straight
-Time: 11350    Straight
-Time: 11376    Straight
-Time: 11402    Straight
-Time: 11427    Straight
-Time: 11454    Straight
-Time: 11480    Straight
-Time: 11505    Straight
-Time: 11532    Straight
-Time: 11557    Straight
-Time: 11584    Straight
-Time: 11610    Straight
-Time: 11635    Straight
-Time: 11662    Straight
-Time: 11687    Straight
-Time: 11714    Straight
-Time: 11740    Straight
-Time: 11765    Straight
-Time: 11792    Straight
-Time: 11817    Straight
-Time: 11844    Straight
-Time: 11870    Straight
-Time: 11895    Straight
-Time: 11922    Straight
-Time: 11948    Straight
-Time: 11973    Straight
-Time: 12000    Time: 12015    Left turn
-Time: 12043    Left turn
-Time: 12069    Left turn
-Time: 12096    Left turn
+Time: 24    Start Area
+Time: 49    Start Area
+Time: 74    Start Area
+Time: 99    Start Area
+Time: 123    Start Area
+Time: 150    Start Area
+Time: 176    Start Area
+Time: 202    Start Area
+Time: 228    Start Area
+Time: 253    Start Area
+Time: 280    Start Area
+Time: 306    Start Area
+Time: 332    Start Area
+Time: 358    Start Area
+Time: 384    Start Area
+Time: 410    Start Area
+Time: 436    Start Area
+Time: 462    Start Area
+Time: 488    Start Area
+Time: 514    Start Area
+Time: 540    Start Area
+Time: 566    Start Area
+Time: 592    Start Area
+Time: 618    Start Area
+Time: 644    Start Area
+Time: 670    Start Area
+Time: 696    Start Area
+Time: 721    Start Area
+Time: 748    Start Area
+Time: 774    Start Area
+Time: 800    Start Area
+Time: 826    Start Area
+Time: 851    Start Area
+Time: 878    Start Area
+Time: 904    Start Area
+Time: 930    Start Area
+Time: 956    Start Area
+Time: 982    Start Area
+Time: 1008    Straight
+Time: 1033    Right turn
+Time: 1060    Right turn
+Time: 1087    Time: 1101    Time: 1116    Time: 1131    Time: 1145    Time: 1160    Time: 1174    Time: 1188    Time: 1204    Time: 1218    Time: 1232    Time: 1247    Time: 1262    Time: 1276    Time: 1291    Time: 1305    Time: 1319    Time: 1335    Time: 1349    Time: 1363    Time: 1378    Time: 1393    Time: 1408    Time: 1422    Time: 1436    Time: 1451    Time: 1466    Time: 1480    Time: 1495    Time: 1509    Straight
+Time: 1534    Straight
+Time: 1559    Straight
+Time: 1584    Straight
+Time: 1609    Straight
+Time: 1634    Straight
+Time: 1659    Straight
+Time: 1684    Straight
+Time: 1709    Straight
+Time: 1734    Straight
+Time: 1759    Straight
+Time: 1783    Straight
+Time: 1809    Straight
+Time: 1833    Straight
+Time: 1859    Straight
+Time: 1884    Straight
+Time: 1908    Straight
+Time: 1934    Straight
+Time: 1958    Straight
+Time: 1983    Straight
+Time: 2009    Straight
+Time: 2033    Straight
+Time: 2059    Straight
+Time: 2083    Straight
+Time: 2108    Straight
+Time: 2134    Straight
+Time: 2158    Straight
+Time: 2183    Straight
+Time: 2208    Straight
+Time: 2233    Straight
+Time: 2258    Straight
+Time: 2283    Straight
+Time: 2308    Straight
+Time: 2333    Straight
+Time: 2358    Straight
+Time: 2382    Straight
+Time: 2408    Straight
+Time: 2433    Straight
+Time: 2458    Straight
+Time: 2483    Straight
+Time: 2507    Straight
+Time: 2533    Straight
+Time: 2557    Straight
+Time: 2582    Straight
+Time: 2608    Straight
+Time: 2632    Straight
+Time: 2658    Straight
+Time: 2682    Straight
+Time: 2707    Straight
+Time: 2733    Straight
+Time: 2757    Straight
+Time: 2782    Straight
+Time: 2807    Straight
+Time: 2832    Straight
+Time: 2857    Straight
+Time: 2882    Straight
+Time: 2907    Straight
+Time: 2932    Straight
+Time: 2957    Straight
+Time: 2981    Straight
+Time: 3007    Straight
+Time: 3032    Straight
+Time: 3057    Straight
+Time: 3082    Straight
+Time: 3106    Straight
+Time: 3132    Straight
+Time: 3156    Straight
+Time: 3181    Straight
+Time: 3207    Straight
+Time: 3231    Straight
+Time: 3257    Straight
+Time: 3281    Straight
+Time: 3306    Straight
+Time: 3332    Straight
+Time: 3356    Straight
+Time: 3381    Straight
+Time: 3406    Straight
+Time: 3431    Straight
+Time: 3457    Straight
+Time: 3481    Straight
+Time: 3506    Straight
+Time: 3531    Straight
+Time: 3556    Straight
+Time: 3580    Straight
+Time: 3606    Straight
+Time: 3631    Straight
+Time: 3656    Straight
+Time: 3681    Straight
+Time: 3705    Straight
+Time: 3731    Straight
+Time: 3756    Straight
+Time: 3780    Straight
+Time: 3806    Straight
+Time: 3830    Straight
+Time: 3856    Straight
+Time: 3880    Straight
+Time: 3905    Straight
+Time: 3931    Straight
+Time: 3955    Straight
+Time: 3980    Straight
+Time: 4005    Left turn
+Time: 4031    Left turn
+Time: 4058    Left turn
+Time: 4083    Left turn
+Time: 4109    Straight
+Time: 4134    Straight
+Time: 4159    Straight
+Time: 4184    Straight
+Time: 4209    Straight
+Time: 4234    Straight
+Time: 4259    Straight
+Time: 4284    Straight
+Time: 4308    Straight
+Time: 4334    Straight
+Time: 4359    Straight
+Time: 4383    Straight
+Time: 4409    Straight
+Time: 4433    Straight
+Time: 4459    Straight
+Time: 4484    Straight
+Time: 4508    Straight
+Time: 4534    Straight
+Time: 4558    Straight
+Time: 4583    Straight
+Time: 4609    Straight
+Time: 4633    Straight
+Time: 4659    Straight
+Time: 4683    Straight
+Time: 4708    Straight
+Time: 4733    Straight
+Time: 4758    Straight
+Time: 4783    Straight
+Time: 4808    Straight
+Time: 4833    Straight
+Time: 4858    Straight
+Time: 4883    Straight
+Time: 4908    Straight
+Time: 4933    Straight
+Time: 4958    Straight
+Time: 4982    Straight
+Time: 5008    Straight
+Time: 5032    Straight
+Time: 5058    Straight
+Time: 5083    Straight
+Time: 5107    Straight
+Time: 5133    Straight
+Time: 5157    Straight
+Time: 5182    Straight
+Time: 5208    Straight
+Time: 5232    Straight
+Time: 5258    Straight
+Time: 5282    Straight
+Time: 5307    Straight
+Time: 5332    Straight
+Time: 5357    Straight
+Time: 5382    Straight
+Time: 5407    Straight
+Time: 5432    Straight
+Time: 5457    Straight
+Time: 5482    Straight
+Time: 5507    Straight
+Time: 5532    Straight
+Time: 5557    Straight
+Time: 5581    Straight
+Time: 5607    Straight
+Time: 5632    Straight
+Time: 5657    Straight
+Time: 5682    Straight
+Time: 5706    Straight
+Time: 5732    Straight
+Time: 5756    Straight
+Time: 5781    Straight
+Time: 5807    Straight
+Time: 5831    Straight
+Time: 5857    Straight
+Time: 5881    Straight
+Time: 5906    Straight
+Time: 5932    Straight
+Time: 5956    Straight
+Time: 5981    Straight
+Time: 6006    Left turn
+Time: 6032    Left turn
+Time: 6059    Left turn
+Time: 6084    Left turn
+Time: 6110    Straight
+Time: 6135    Straight
+Time: 6160    Straight
+Time: 6185    Straight
+Time: 6210    Straight
+Time: 6235    Straight
+Time: 6260    Straight
+Time: 6285    Straight
+Time: 6309    Straight
+Time: 6335    Straight
+Time: 6360    Straight
+Time: 6385    Straight
+Time: 6410    Straight
+Time: 6434    Straight
+Time: 6460    Straight
+Time: 6484    Straight
+Time: 6509    Straight
+Time: 6535    Straight
+Time: 6559    Straight
+Time: 6585    Straight
+Time: 6609    Straight
+Time: 6634    Straight
+Time: 6660    Straight
+Time: 6684    Straight
+Time: 6709    Straight
+Time: 6734    Straight
+Time: 6759    Straight
+Time: 6785    Straight
+Time: 6809    Straight
+Time: 6834    Straight
+Time: 6859    Straight
+Time: 6884    Straight
+Time: 6908    Straight
+Time: 6934    Straight
+Time: 6959    Straight
+Time: 6984    Straight
+Time: 7009    Straight
+Time: 7033    Straight
+Time: 7059    Straight
+Time: 7084    Straight
+Time: 7108    Straight
+Time: 7134    Straight
+Time: 7158    Straight
+Time: 7184    Straight
+Time: 7208    Straight
+Time: 7233    Straight
+Time: 7259    Straight
+Time: 7283    Straight
+Time: 7308    Straight
+Time: 7333    Straight
+Time: 7358    Straight
+Time: 7384    Straight
+Time: 7408    Straight
+Time: 7433    Straight
+Time: 7458    Straight
+Time: 7483    Straight
+Time: 7507    Straight
+Time: 7533    Straight
+Time: 7558    Straight
+Time: 7583    Straight
+Time: 7608    Straight
+Time: 7632    Straight
+Time: 7658    Straight
+Time: 7683    Straight
+Time: 7707    Straight
+Time: 7733    Straight
+Time: 7757    Straight
+Time: 7783    Straight
+Time: 7808    Straight
+Time: 7832    Straight
+Time: 7858    Straight
+Time: 7882    Straight
+Time: 7907    Straight
+Time: 7932    Straight
+Time: 7957    Straight
+Time: 7983    Straight
+Time: 8007    Straight
+Time: 8032    Straight
+Time: 8057    Straight
+Time: 8082    Straight
+Time: 8107    Straight
+Time: 8132    Straight
+Time: 8157    Straight
+Time: 8182    Straight
+Time: 8207    Straight
+Time: 8231    Straight
+Time: 8257    Straight
+Time: 8282    Straight
+Time: 8306    Straight
+Time: 8332    Straight
+Time: 8356    Straight
+Time: 8382    Straight
+Time: 8407    Left turn
+Time: 8432    Left turn
+Time: 8459    Left turn
+Time: 8484    Left turn
+Time: 8510    Straight
+Time: 8536    Straight
+Time: 8560    Straight
+Time: 8586    Straight
+Time: 8610    Straight
+Time: 8635    Straight
+Time: 8660    Straight
+Time: 8685    Straight
+Time: 8710    Straight
+Time: 8735    Straight
+Time: 8760    Straight
+Time: 8785    Straight
+Time: 8810    Straight
+Time: 8835    Straight
+Time: 8860    Straight
+Time: 8885    Straight
+Time: 8909    Straight
+Time: 8935    Straight
+Time: 8960    Straight
+Time: 8985    Straight
+Time: 9010    Straight
+Time: 9034    Straight
+Time: 9060    Straight
+Time: 9084    Straight
+Time: 9109    Straight
+Time: 9135    Straight
+Time: 9159    Straight
+Time: 9185    Straight
+Time: 9209    Straight
+Time: 9234    Straight
+Time: 9260    Straight
+Time: 9284    Straight
+Time: 9309    Straight
+Time: 9334    Straight
+Time: 9359    Straight
+Time: 9384    Straight
+Time: 9409    Straight
+Time: 9434    Straight
+Time: 9459    Straight
+Time: 9484    Straight
+Time: 9508    Left turn
+Time: 9535    Left turn
+Time: 9561    Left turn
+Time: 9587    Left turn
