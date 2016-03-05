@@ -68,19 +68,23 @@ void drive(int state) {
   leftTurn();
   Serial.println("Left turn");
  } 
+ if (state == 7) {   //00111
+  rightTurn();
+  Serial.println("Right turn");
+ } 
  if (state == 31) {   //11111 second time we encounter this it has to be a right turn
     //straight();  
-    if (currentTime < 20000) {
+    if (currentTime < 9500) {
       Serial.println("Straight");
       //straight();
     }
-    if ((currentTime > 20000) && (currentTime < 25000)) { 
+    if ((currentTime > 9500) && (currentTime < 25000)) { 
       Serial.println("Right turn");
-      //rightTurn();
+      rightTurn();
     }
     if (currentTime > 25000) {
       Serial.println("Left turn");
-      //leftTurn();
+      leftTurn();
     }
   
  } 
@@ -116,6 +120,7 @@ void leftTurn() { //Turns the robot left from the center
 void rightTurn() { //Turns the robot right from the center
  //md.setM1Speed(300); //Reverse right side
  //md.setM2Speed(380);//Forward left side
+ delay(60);
 }
 void stopMotors() {//Stop the robot
  //md.setM1Speed(0);
@@ -188,7 +193,39 @@ void virtualTrack() {
     drive(testSensor(1,1,1,0,0));
   }
   //Third Quadrant END===========================================================================
-//END OF VIRTUAL TRACK=======================================================================
+  if ((currentTime > 9600) && (currentTime < 10600)) { //Straight short 00100
+    drive(testSensor(0,0,1,0,0));
+  }
+  if ((currentTime > 10600) && (currentTime < 10700)) { //First right turn 11111
+    drive(testSensor(1,1,1,1,1));
+  }
+  if ((currentTime > 10700) && (currentTime < 11700)) { //Second straight short 00100
+    drive(testSensor(0,0,1,0,0));
+  }
+  if ((currentTime > 11700) && (currentTime < 11800)) { //Second right turn 00111
+    drive(testSensor(0,0,1,1,1));
+  }
+  if ((currentTime > 11800) && (currentTime < 12800)) { //Third straight short 00100
+    drive(testSensor(0,0,1,0,0));
+  }
+  if ((currentTime > 12800) && (currentTime < 12900)) { //Fourth Left turn 11100
+    drive(testSensor(1,1,1,0,0));
+  }
+  //Fourth Quadrant END==================================================================================
+  if ((currentTime > 12900) && (currentTime < 13900)) { //Keep Straight 00100
+    drive(testSensor(0,0,1,0,0));
+  }
+  if ((currentTime > 13900) && (currentTime < 14000)) { //Fifth Left turn 11100
+    drive(testSensor(1,1,1,0,0));
+  }
+  //Fifth Quadrant END=========================================================================
+  if ((currentTime > 14000) && (currentTime < 15900)) { //Keep Straight 00100
+    drive(testSensor(0,0,1,0,0));
+  }
+  if ((currentTime > 15900) && (currentTime < 16000)) { //Sixth Left turn 11100
+    drive(testSensor(1,1,1,0,0));
+  }
+//END OF VIRTUAL TRACK==========================================================================
 }
 /*
   Robot path
@@ -196,20 +233,61 @@ void virtualTrack() {
   11111 Out of the start area
   00100 first straight
   11100 first left turn
-  First Quadrant End-----------------------------
+  |OOOOOOOO|>>>>>>>>>>>>>>>>>>Drop rings 1 and 2
+  =====First Quadrant End-----------------------------
+  
   00100 second straight
   11100 ignore and go straight
   00100 third straight
   11100 second turn left 
-  Second Quadrant End----------------------------
+  |OOOOOOOO|>>>>>>>>>>>>>>>>>>Drop rings 3 and 4
+  =====Second Quadrant End----------------------------
+  
   00100 go straight
   11100 third turn left
-  Third Quadrant End-----------------------------
+  |OOOOOOOO|>>>>>>>>>>>>>>>>>>Drop ring 5
+  =====Third Quadrant End-----------------------------
+  
   00100 go straight SHORT
   11111 turn right
   00100 go straight SHORT
+  |OOOOOOOO|>>>>>>>>>>>>>>>>>>Drop ring 6
   00111 turn right
   00100 go straight SHORT
-  //Fourth Quadrant End--------------------------
+  =====Fourth Quadrant End----------------------------
+  
+  11100 turn left
+  |OOOOOOOO|>>>>>>>>>>>>>>>>>>Drop ring 7
+  00100 go straight
+  11100 turn left
+  |OOOOOOOO|>>>>>>>>>>>>>>>>>>Drop rings 8 and 9
+  =====Fifth Quadrant END-----------------------------
+  
+  00100 go straight
+  11100 turn left
+  =====Sixth Quadrant END-----------------------------
+  
+  00100 go straight
+  11111 turn right
+  00100 go straight
+  11100 turn left
+  00100 go straight
+  |OOOOOOOO|>>>>>>>>>>>>>>>>>>Drop ring 11
+  11100 turn left
+  00100 go straight
+  11111 turn left
+  00100 go straight
+  11111 ignore and go straight
+  00100 straight very short
+  11111 turn left
+  =====Inside track END-------------------------------
+  
+  00100 go straight
+  11100 left turn
+  |OOOOOOOO|>>>>>>>>>>>>>>>>>>Drop ring 12
+  00100 go straight
+  11111 END!
+  //END=======================================================================================================
+  
   
 */
