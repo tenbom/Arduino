@@ -1,0 +1,12 @@
+Exit start area 
+center robot
+go straight
+turn left 
+go straight
+Ignore Left
+go straight
+turn left
+go straight
+turn left
+go straight
+turn right
